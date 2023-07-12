@@ -1,0 +1,23 @@
+{% extends "home/layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+<div id="banner">
+    <div><img src="static/home/ilustra-home.png" alt="ilustração de monstro colorido" id="slide"></div>
+    <section id="texto-home">
+    <h1>Olá, lindeza!</h1>
+    <p>Muito prazer, me chamo Dand! Artista visual, costureire, designer, doide! Aqui você encontra alguns dos meus trabalhos mais queridos,
+        as coisas que realmente amo de paixão e que me fazem sentir uma bolha colorida de alegria. Ah, meus pronomes são ela/dela/ele/dele/elu/delu. Sou 
+        demais pra caber em uma coisa só! Na dúvida, me chame de "meu bem". :3
+    </p>
+    </section>
+</div>
+<container id="gallery-home">
+    <a href="{% url 'artes' %}"><div id="artes" class="gal-home"><h3>Moda & artes</h3></div></a>
+    <a href="{% url 'marcas' %}"><div id="marcas" class="gal-home"><h3>Marcas</h3></div></a>
+    <a href="{% url 'monstros' %}"><div id="monstros" class="gal-home"><h3>Monstros</h3></div></a>
+</container>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "home/layout.html" %}
+
+{% block title %}
+    Galeria
+{% endblock %}
+
+{% block body %}
+<div id="banner-galeria"></div>
+<container>
+    <section class="texto-core">
+        <h1>Imagens bonitas para todos os gostos!</h1>
+            <p>
+                Sou uma eterna criança. Faço todo tipo de layout (leve em consideração que presto serviço para um grande hospital há uns 6-7 anos rs), 
+                mas o que amo de verdade envolve sempre muitas cores, blocos, formas fluidas e diversão. Eu nasci pra me divertir. Se não for pra morrer
+                de rir, prefiro não viver. Clique nas sessões abaixo e conheça um pouco mais do meu trabalho! Selecionei só o que me deu prazer. 
+                Se fiz mais do que isso? Sim, muito. Se foi moroso e quero esquecer? Sim também. 
+            </p>
+    </section>
+    <container id="gallery-home">
+        <a href="{% url 'artes' %}"><div id="artes" class="gal-home"><h3>Moda & artes</h3></div></a>
+        <a href="{% url 'marcas' %}"><div id="marcas" class="gal-home"><h3>Marcas</h3></div></a>
+        <a href="{% url 'monstros' %}"><div id="monstros" class="gal-home"><h3>Monstros</h3></div></a>
+    </container>
+</container>
+{% endblock %}

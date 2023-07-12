@@ -1,0 +1,28 @@
+{% extends "home/layout.html" %}
+
+{% block title %}
+    Contato
+{% endblock %}
+
+{% block body %}
+{% load bootstrap4 %}
+{% include 'home/messages.html' %}
+<div id="contact">
+    <section id="texto-contato">
+        <h1>Fala comigo, bebê!</h1>
+        <p>Que bom ver você por aqui! Muito obrigade pelo seu interesse no meu trabalho e por entrar em contato! Preencha o formulário para falar comigo por e-mail, ou clique no botão abaixo para falar pelo whatsapp (o famoso zapzap). Pode ter certeza que 
+            respondo rapidinho em qualquer um dos dois. Só não me liga. Mesmo. Desde criança falar ao telefone me causa uma ansiedade paralisante. 
+            É sério. Rindo de nervoso. #mandaáudio hahahaha ♥
+        </p>
+        <a href="https://wa.me/5521980894250"><button class="btn btn-success btn-lg" target="_blank">Chamar no zap</button></a>
+    </section>
+    <form action="{% url 'contato' %}" method="POST" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %} 
+        {% buttons %}
+            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+        {% endbuttons %}
+    </form>
+</div>
+{% bootstrap_javascript jquery='full' %}
+{% endblock %}

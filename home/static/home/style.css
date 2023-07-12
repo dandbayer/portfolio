@@ -1,0 +1,227 @@
+* {
+    font-family: poppins, sans-serif;
+    color: #5A5A5A;
+    margin: 0;
+    padding: 0;
+}
+
+a:link {text-decoration:none}
+a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+a:active {text-decoration:none}
+
+#logo {
+    max-width: 180px;
+    margin: 2em;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar li a {
+    padding: 0.5em;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #5A5A5A;
+}
+
+#banner {
+    display: flex;
+    margin: 2em 5em;
+    align-items: center;
+    justify-content: center;
+}
+
+#slide {
+    animation: 3s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+#texto-home {
+    padding: 3em;
+}
+
+h1, h2 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    margin: 2em;
+}
+
+#retrato {
+    width: 100%;
+    max-width: 400px;
+    background-color: lightpink;
+    padding: 2em;
+}
+
+#texto-sobre {
+    padding: 5em;
+}
+
+#gallery-home {
+    display: flex;
+    justify-content: center;
+}
+
+#gallery-home h3 {
+    color: white;
+    padding: 0.5em;
+    font-size: 1.5em;
+    background-color: black;
+}
+
+.gal-home {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+#artes {
+    background-image: url('/static/home/artes.png');
+}
+
+#marcas {
+    background-image: url('/static/home/marcas.png');
+}
+
+#monstros {
+    background-image: url('/static/home/monstros.png');
+}
+
+#artes:hover, #marcas:hover, #monstros:hover  {
+    transform: translateY(-1rem);
+    transition: all 0.5s ease-in-out;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 1em;
+}
+
+#banner-galeria {
+    background-image: url('/static/home/capagaleria.png');
+    background-position: center;
+    min-height: 400px;
+    width: 100vw;
+}
+
+.texto-core h1 {
+    text-align: center;
+    margin: 0.5em;
+}
+
+.texto-core p {
+    margin: 0 8em 2em 8em;
+    text-align: center;
+}
+
+.box-marca {
+    display: flex;
+    align-items: center;
+    margin: 3em;
+}
+
+.texto-sliders {
+    padding: 2em;
+    width: 70%;
+}
+
+.box-marca-esq {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 3em;
+}
+
+#contact {
+    display: flex;
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto-contato, form {
+    margin: 2em;
+    width: 40%;
+}
+
+.alert {
+    margin: 2em;
+}
+
+@media only screen and (max-width: 1024px) {
+    #banner {
+        flex-direction: column;
+    }
+    #slide {
+        width: 100%;
+    }
+    #texto-home, #texto-sobre {
+        padding: 1em;
+    }
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+    #gallery-home {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-marca, .box-marca-esq {
+        flex-direction: column;
+        margin: 1em
+    }
+    .texto-core p{
+        margin: 1em;
+    }
+    .texto-sliders {
+        width: 100%;
+    }
+    #contact {
+        flex-direction: column;
+    }
+    #texto-contato, form {
+        margin: 1em;
+        width: 100%;
+    }
+}
